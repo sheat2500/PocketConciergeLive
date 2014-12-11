@@ -28,9 +28,4 @@ public class HotelDetailFragment extends Fragment {
 		return v;
 	}
 
-	public void clickToProfile(View v) {
-		ProfileActivity profileActivity = (ProfileActivity) getActivity();
-		// 2 represent ProfileFragment
-		profileActivity.showFragment(2);
-	}
 }

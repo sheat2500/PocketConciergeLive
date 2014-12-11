@@ -5,13 +5,14 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.view.View;
 
 import com.project.pocketconciergelive.R;
 import com.project.pocketconciergelive.fragment.HotelDetailFragment;
 import com.project.pocketconciergelive.fragment.ProfileFragment;
 
 /**
- * ProfileActivity: 1) HotelDetailFragment, 2) ProfileFragment
+ * ProfileActivity: 0) HotelDetailFragment,1) ProfileFragment
  * 
  * @author Te
  * 
@@ -50,6 +51,14 @@ public class ProfileActivity extends FragmentActivity {
 	public void showFragment(int fragment) {
 		// getFragmentManager & getSupportFragmentManager
 		FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-		ft.show(profileFragment);
+		for (int i = 0; i < fragments.length; i++) {
+			ft.hide(fragments[i]);
+		}
+		ft.show(fragments[fragment]).commit();
+	}
+
+	public void clickToProfile(View v) {
+		// This is called by view in Fragment.
+		showFragment(1);
 	}
 }
