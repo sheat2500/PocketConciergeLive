@@ -14,10 +14,10 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/whitedownarrow"
+        android:icon="@drawable/actionbar_icon"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.project.pocketconciergelive.controller.MainActivity"
+            android:name="com.project.pocketconciergelive.activity.HotelActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,7 +26,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.project.pocketconciergelive.controller.ProfileActivity"
+            android:name="com.project.pocketconciergelive.activity.ProfileActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="com.project.pocketconciergelive.controller.ProfileActivity" />
@@ -35,7 +35,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.project.pocketconciergelive.controller.Chat"
+            android:name="com.project.pocketconciergelive.activity.ChatActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="com.project.pocketconciergelive.chat" />

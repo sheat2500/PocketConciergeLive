@@ -1,5 +1,6 @@
 eclipse.preferences.version=1
 encoding//src/com/project/pocketconcierge/database/DBAdapter.java=UTF-8
-encoding//src/com/project/pocketconciergelive/controller/MainActivity.java=UTF-8
-encoding//src/com/project/pocketconciergelive/controller/MainFragment.java=UTF-8
-encoding//src/com/project/pocketconciergelive/controller/RegisterFragment.java=UTF-8
+encoding//src/com/project/pocketconciergelive/activity/HotelActivity.java=UTF-8
+encoding//src/com/project/pocketconciergelive/activity/ProfileActivity.java=UTF-8
+encoding//src/com/project/pocketconciergelive/fragment/HotelFragment.java=UTF-8
+encoding//src/com/project/pocketconciergelive/fragment/RegisterFragment.java=UTF-8

@@ -25,6 +25,7 @@
             android:layout_gravity="left|center_vertical"
             android:background="@color/black"
             android:hint="@string/location"
+            android:lines="1"
             android:maxLines="1"
             android:textColor="@color/gray"
             android:textSize="15dp" />
@@ -43,8 +44,7 @@
                 android:id="@+id/hotellist"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content" >
-
-                <requestFocus />
+                <requestFocus/>
             </ListView>
         </LinearLayout>
 
@@ -57,7 +57,7 @@
             android:gravity="center_horizontal" >
 
             <Button
-                android:id="@+id/login"
+                android:id="@+id/loginMain"
                 android:layout_width="100dp"
                 android:layout_height="30dp"
                 android:layout_gravity="bottom"
@@ -67,7 +67,7 @@
                 android:textSize="10dp" />
 
             <Button
-                android:id="@+id/register"
+                android:id="@+id/registerMain"
                 android:layout_width="100dp"
                 android:layout_height="30dp"
                 android:layout_marginRight="10dp"
