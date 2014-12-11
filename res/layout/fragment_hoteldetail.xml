@@ -10,25 +10,23 @@
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:alpha="0.8"
-        android:background="@color/grey"
+        android:background="@color/darkgray"
         android:gravity="center_vertical"
         android:orientation="vertical" >
 
         <ImageView
             android:id="@+id/hotelDetailBanner"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:src="@drawable/logo" />
+            android:layout_height="100dp"
+            android:src="@drawable/pocket_icon" />
 
         <EditText
             android:id="@+id/name"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:hint="Your Name"
+            android:hint="@string/custom_name"
             android:textSize="10dp" >
-
-            <requestFocus />
         </EditText>
 
         <EditText
@@ -36,8 +34,21 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:hint="Your Room"
+            android:hint="@string/custom_room_number"
+            android:textColor="@color/red"
             android:textSize="10dp" />
+
+        <Button
+            android:id="@+id/toProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/holo_red_light"
+            android:text="CALL"
+            android:onClick="clickToProfile"
+            android:textSize="15dp" />
+
     </LinearLayout>
 
 </LinearLayout>

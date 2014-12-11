@@ -5,8 +5,8 @@
     android:orientation="vertical" >
 
     <fragment
-        android:id="@+id/hotelfragment"
-        android:name="com.project.pocketconciergelive.fragment.HotelFragment"
+        android:id="@+id/hoteldetailfragment"
+        android:name="com.project.pocketconciergelive.fragment.HotelDetailFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
     </fragment>

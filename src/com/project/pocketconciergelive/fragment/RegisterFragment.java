@@ -15,6 +15,7 @@ import android.widget.TextView;
 
 import com.project.pocketconcierge.database.DBAdapter;
 import com.project.pocketconciergelive.R;
+import com.project.pocketconciergelive.activity.HotelActivity;
 
 public class RegisterFragment extends Fragment {
 
@@ -26,8 +27,8 @@ public class RegisterFragment extends Fragment {
 	Button submit;
 	DBAdapter dbAdapter;
 	AlertDialog.Builder alertBuilder;
-	android.content.DialogInterface.OnClickListener positiveClickListener;
-	android.content.DialogInterface.OnClickListener negitiveClickListener;
+	DialogInterface.OnClickListener positiveClickListener;
+	DialogInterface.OnClickListener negitiveClickListener;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater,
@@ -53,30 +54,34 @@ public class RegisterFragment extends Fragment {
 				bundle.putString("username", username.getText().toString());
 				bundle.putString("password", password.getText().toString());
 				bundle.putString("datebirth", datebirth.getText().toString());
-				positiveClickListener = new android.content.DialogInterface.OnClickListener() {
-					
+				positiveClickListener = new DialogInterface.OnClickListener() {
+
 					@Override
 					public void onClick(DialogInterface dialog, int which) {
 						// TODO Auto-generated method stub
+						HotelActivity hotelActivity = (HotelActivity) getActivity();
+						hotelActivity.setSessionStatu(true);
+						hotelActivity.showFragment("HotelFragment", true);
 					}
 				};
-				
-				negitiveClickListener = new android.content.DialogInterface.OnClickListener() {
-					
+
+				negitiveClickListener = new DialogInterface.OnClickListener() {
+
 					@Override
 					public void onClick(DialogInterface dialog, int which) {
 						// TODO Auto-generated method stub
-						
+
 					}
 				};
-				
-				// ?????????????????????execute
+
 				// Connect to WebServer
 				// new RegisterSuccess().execute(bundle);
 				boolean flag = register(bundle);
 				if (flag == true) {
-					alertBuilder.setTitle("Note").setMessage(
-							"Register Succeess!").setPositiveButton("ok", positiveClickListener);
+					alertBuilder.setTitle("Congratulations")
+							.setMessage("Registered successfully!")
+							.setPositiveButton("LogIn", positiveClickListener);
+					alertBuilder.show();
 				}
 
 			}

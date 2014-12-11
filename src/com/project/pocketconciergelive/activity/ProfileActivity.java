@@ -18,10 +18,10 @@ import com.project.pocketconciergelive.fragment.ProfileFragment;
  */
 public class ProfileActivity extends FragmentActivity {
 
-	private static final int HOTELDETAIL = 0;
-	private static final int PROFILE = 1;
-	private static final int FRAGMENT_COUNT = PROFILE + 1;
-	private Fragment[] fragments = new Fragment[FRAGMENT_COUNT];
+	public static final int HOTELDETAIL = 0;
+	public static final int PROFILE = 1;
+	public static final int FRAGMENT_COUNT = PROFILE + 1;
+	public Fragment[] fragments = new Fragment[FRAGMENT_COUNT];
 
 	HotelDetailFragment hotelDetailFragment;
 	ProfileFragment profileFragment;
@@ -36,7 +36,7 @@ public class ProfileActivity extends FragmentActivity {
 		profileFragment = (ProfileFragment) fm
 				.findFragmentById(R.id.profilefragment);
 		hotelDetailFragment = (HotelDetailFragment) fm
-				.findFragmentById(R.id.hotelfragment);
+				.findFragmentById(R.id.hoteldetailfragment);
 		fragments[PROFILE] = profileFragment;
 		fragments[HOTELDETAIL] = hotelDetailFragment;
 		FragmentTransaction transaction = fm.beginTransaction();
@@ -50,7 +50,6 @@ public class ProfileActivity extends FragmentActivity {
 	public void showFragment(int fragment) {
 		// getFragmentManager & getSupportFragmentManager
 		FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-		
+		ft.show(profileFragment);
 	}
-
 }

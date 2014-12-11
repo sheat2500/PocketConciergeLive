@@ -1,7 +1,9 @@
 package com.project.pocketconciergelive.fragment;
 
 import com.project.pocketconciergelive.R;
+import com.project.pocketconciergelive.activity.ProfileActivity;
 
+import android.app.FragmentManager;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -21,7 +23,14 @@ public class HotelDetailFragment extends Fragment {
 			@Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreateView(inflater, container, savedInstanceState);
-		View v = inflater.inflate(R.layout.fragment_hoteldetail, container, false);
+		View v = inflater.inflate(R.layout.fragment_hoteldetail, container,
+				false);
 		return v;
+	}
+
+	public void clickToProfile(View v) {
+		ProfileActivity profileActivity = (ProfileActivity) getActivity();
+		// 2 represent ProfileFragment
+		profileActivity.showFragment(2);
 	}
 }
