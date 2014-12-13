@@ -20,10 +20,6 @@ public class DBAdapter {
 	static final String DATABASE_CREATE = "CREATE TABLE accounttable(_id INTEGER PRIMARY KEY AUTOINCREMENT, "
 			+ "username	TEXT NOT NULL, password	TEXT NOT NULL, datebirth TEXT NOT NULL);";
 
-	// "CREATE TABLE notebook (_id	INTEGER PRIMARY KEY AUTOINCREMENT,"
-	// +
-	// "dateforshow	TEXT NOT NULL,dateforsave text nut null, content TEXT, title text);";
-
 	DatabaseHelper DBHelper;
 	final Context context;
 	SQLiteDatabase db;

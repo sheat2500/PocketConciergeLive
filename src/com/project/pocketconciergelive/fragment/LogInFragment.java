@@ -1,6 +1,5 @@
 package com.project.pocketconciergelive.fragment;
 
-import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -13,19 +12,16 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.facebook.widget.LoginButton;
 import com.project.pocketconcierge.database.DBAdapter;
 import com.project.pocketconciergelive.R;
 import com.project.pocketconciergelive.activity.HotelActivity;
 
 public class LogInFragment extends Fragment {
 
-	private static final String LOGINFRAGMENT = "LogInFragment";
 	TextView username;
 	TextView password;
 	TextView showview;
 	DBAdapter dbAdapter;
-	private LoginButton loginButton;
 	private Button login;
 	private Button register;
 
@@ -37,7 +33,6 @@ public class LogInFragment extends Fragment {
 		username = (TextView) v.findViewById(R.id.username);
 		password = (TextView) v.findViewById(R.id.password);
 		showview = (TextView) v.findViewById(R.id.showView);
-		loginButton = (LoginButton) v.findViewById(R.id.authButton);
 		dbAdapter = new DBAdapter(getActivity());
 		login = (Button) v.findViewById(R.id.login);
 		// login Action

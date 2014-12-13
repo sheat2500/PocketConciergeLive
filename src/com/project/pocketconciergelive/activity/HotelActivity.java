@@ -2,20 +2,14 @@ package com.project.pocketconciergelive.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
-import android.widget.ListView;
-import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.facebook.Session;
@@ -34,19 +28,11 @@ public class HotelActivity extends FragmentActivity {
 	private FragmentManager fragmentManager;
 	private LogInFragment logInFragment;
 	private RegisterFragment registerFragment;
-	private Bundle savedInstanceState;
 	private UiLifecycleHelper uiHelper;
 	private Button login;
 	private Button register;
 	// Whether has login!
 	public static boolean sessionStatu = false;
-
-	// private static final int hotelFragment = 0;
-	// private static final int LOGINFRAGMENT = 1;
-	// private static final int REGISTERFRAGMENT = 2;
-	// private static final int FRAGMENT_COUNT = REGISTERFRAGMENT + 1;
-	//
-	// private Fragment[] fragments = new Fragment[FRAGMENT_COUNT];
 
 	private Session.StatusCallback callback = new StatusCallback() {
 
@@ -61,7 +47,6 @@ public class HotelActivity extends FragmentActivity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		this.savedInstanceState = savedInstanceState;
 		fragmentManager = getSupportFragmentManager();
 		createFragments();
 		fragmentManager

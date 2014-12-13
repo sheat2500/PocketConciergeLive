@@ -23,7 +23,7 @@ public class ProfileActivity extends FragmentActivity {
 	public static final int PROFILE = 1;
 	public static final int FRAGMENT_COUNT = PROFILE + 1;
 	public Fragment[] fragments = new Fragment[FRAGMENT_COUNT];
-
+	
 	HotelDetailFragment hotelDetailFragment;
 	ProfileFragment profileFragment;
 
